@@ -1,0 +1,47 @@
+// A test script for a sample kb, tell statements, and queries
+echo on
+new-kb
+
+///////////////////////////////////////////////////////////////
+//               Tell: Assert Axioms and Facts
+///////////////////////////////////////////////////////////////
+
+// Note: This is the propositional version of "test-fol.fol"
+
+// Some simple axioms
+tell "a_scott => b_scott"
+tell "b_scott <=> c_scott"
+tell "a_joe => b_joe"
+tell "b_joe <=> c_joe"
+
+// Exactly one of b_scott or b_joe is true
+tell "(b_scott | b_joe) ^ ~(b_scott ^ b_joe)"
+
+// A simple fact - A is for Awesome! 
+tell "a_scott"
+
+///////////////////////////////////////////////////////////////
+//                     Ask: Make Queries
+///////////////////////////////////////////////////////////////
+
+// Can prove this 
+ask  "c_scott"
+
+// Cannot prove this
+ask  "~c_scott"
+
+// Cannot prove this 
+ask  "c_joe"
+
+// Can prove this
+ask  "~c_joe"
+
+// Can prove this 
+ask  "c_scott | c_joe"
+
+// Cannot prove this 
+ask  "c_scott ^ c_joe"
+
+quit
+
+

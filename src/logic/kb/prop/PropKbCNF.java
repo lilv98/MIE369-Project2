@@ -31,8 +31,8 @@ import java.io.*;
 import java.util.*;
 
 import logic.kb.*;
-import logic.kb.fol.BindingSet;
-import logic.kb.fol.FOPC.Node;
+// import logic.kb.fol.BindingSet;
+// import logic.kb.fol.FOPC.Node;
 
 import util.MapList;
 
@@ -1204,65 +1204,65 @@ public class PropKbCNF extends Kb {
 		System.out.println("\n----------------------------------------------------------\n");
 	}
 
-	@Override
-	public void addFOPCFormula(String s) {
-		// TODO Auto-generated method stub
+	// @Override
+	// public void addFOPCFormula(String s) {
+	// 	// TODO Auto-generated method stub
 		
-	}
+	// }
 
-	@Override
-	public boolean queryFOPC(String s) {
-		// TODO Auto-generated method stub
-		return false;
-	}
+	// @Override
+	// public boolean queryFOPC(String s) {
+	// 	// TODO Auto-generated method stub
+	// 	return false;
+	// }
 
-	@Override
-	public boolean queryFOPC(String assume, String query) {
-		// TODO Auto-generated method stub
-		return false;
-	}
+	// @Override
+	// public boolean queryFOPC(String assume, String query) {
+	// 	// TODO Auto-generated method stub
+	// 	return false;
+	// }
 
-	@Override
-	public BindingSet queryFOPCBindings(String s) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	// @Override
+	// public BindingSet queryFOPCBindings(String s) {
+	// 	// TODO Auto-generated method stub
+	// 	return null;
+	// }
 
-	@Override
-	public BindingSet queryFOPCBindings(String assume, String query) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	// @Override
+	// public BindingSet queryFOPCBindings(String assume, String query) {
+	// 	// TODO Auto-generated method stub
+	// 	return null;
+	// }
 
-	@Override
-	public void addFOPCFormula(Node n) {
-		// TODO Auto-generated method stub
+	// @Override
+	// public void addFOPCFormula(Node n) {
+	// 	// TODO Auto-generated method stub
 		
-	}
+	// }
 
-	@Override
-	public boolean queryFOPC(Node n) {
-		// TODO Auto-generated method stub
-		return false;
-	}
+	// @Override
+	// public boolean queryFOPC(Node n) {
+	// 	// TODO Auto-generated method stub
+	// 	return false;
+	// }
 
-	@Override
-	public boolean queryFOPC(Node assume, Node query) {
-		// TODO Auto-generated method stub
-		return false;
-	}
+	// @Override
+	// public boolean queryFOPC(Node assume, Node query) {
+	// 	// TODO Auto-generated method stub
+	// 	return false;
+	// }
 
-	@Override
-	public BindingSet queryFOPCBindings(Node n) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	// @Override
+	// public BindingSet queryFOPCBindings(Node n) {
+	// 	// TODO Auto-generated method stub
+	// 	return null;
+	// }
 
-	@Override
-	public BindingSet queryFOPCBindings(Node assume, Node query) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	// @Override
+	// public BindingSet queryFOPCBindings(Node assume, Node query) {
+	// 	// TODO Auto-generated method stub
+	// 	return null;
+	// }
 
 	@Override
 	public float getQueryTime() {

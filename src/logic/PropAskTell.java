@@ -21,7 +21,6 @@ import java.io.*;
 import java.util.ArrayList;
 
 import logic.kb.Kb;
-import logic.kb.fol.*;
 import logic.kb.prop.PropKbCNF;
 import logic.kb.prop.PropKbCNF.ParseStruct;
 

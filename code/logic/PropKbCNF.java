@@ -1,35 +1,6 @@
-////////////////////////////////////////////////////////////////////////////////////
-//
-// First-Order Algebraic Decision Diagram Package
-//
-// Class:  PropKb - A Kb interface for propositional theorem proving
-//                  (includes a String based interface!)
-// Author: Scott Sanner (ssanner@cs.toronto.edu)
-// Date:   7/25/03
-//
-// TODO:
-// -----
-// - Update for current ADD version
-// - Make an FOL Kb to support different types of FOL Kb creations
-//   and queries (takes both strings and FOL structs as queries
-//   and tell)
-// - NOTE: Will have to handle paramodulation manually
-// - LATER: Eventually should have LALR parser for Prop formula and
-//   build trees directly from this - then use this to interface
-//   with ADDs.  This is currently done but with a simple and
-//   potentially buggy recursive descent parser - nevertheless, a
-//   propositional structure can be retrieved from a String!
-// - Printing for prop formula
-// - ADDs for partition sets
-// - Have PropTerms and ADDs use variable name mapping - just set a HashMap?
-//
-////////////////////////////////////////////////////////////////////////////////////
-
 package logic;
-
 import java.io.*;
 import java.util.*;
-
 import logic.PropFormula.BinConn;
 import logic.PropFormula.Prop;
 import logic.PropFormula.Term;

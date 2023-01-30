@@ -1,33 +1,9 @@
-//////////////////////////////////////////////////////////////////////
-//
-// File:     LShell.java
-// Project:  MIE457F Data Mining System
-// Author:   Scott Sanner, University of Toronto (ssanner@cs.toronto.edu)
-// Date:     9/1/2003
-// Requires: comshell package
-//
-//////////////////////////////////////////////////////////////////////
-
-// Package definition
 package logic;
-
 import utils.*;
-
 import java.io.*;
 import java.util.ArrayList;
-
 import logic.PropKbCNF.ParseStruct;
 
-/**
- * Text shell interface for a logical inference system
- * 
- * @version 1.0
- * @author Scott Sanner
- * @language Java (JDK 1.3)
- * 
- * TODO:
- * - README needs examples
- **/
 public class PropAskTell {
 	/* Static constants */
 	public final static int MAX_INPUT = 4096;

@@ -12,10 +12,7 @@ public abstract class Kb {
 
     // Query filename to use (assigns first unused filename)
     public static String QUERY_FILE = null;
-
-    static {
-    	QUERY_FILE = "query.in";
-    }
+    static {QUERY_FILE = "query.in";}
     
     // String interface
     public abstract void       addFOPCFormula(String s);

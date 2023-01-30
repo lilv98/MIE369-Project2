@@ -6,10 +6,6 @@
 // Date:     9/1/2003
 // Requires: comshell package
 //
-// Description:
-//
-//   A command line interface to the logic.kb.fol package.
-//
 //////////////////////////////////////////////////////////////////////
 
 // Package definition

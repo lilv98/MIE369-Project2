@@ -1,12 +1,8 @@
 package logic;
 
-import java.util.*;
-
 public class PropFormula {
 
 	public abstract static class Term {
-		// Not efficient, but String representation should 
-		// contain relevant information
 		public int hashCode() {
 			return toString().hashCode();
 		}

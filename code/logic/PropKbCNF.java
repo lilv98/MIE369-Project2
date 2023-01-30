@@ -1,14 +1,9 @@
 package logic;
 import java.io.*;
 import java.util.*;
-import logic.PropFormula.BinConn;
-import logic.PropFormula.Prop;
-import logic.PropFormula.Term;
-import logic.PropFormula.TruthConstant;
-import logic.PropFormula.UnConn;
 
-public class PropKbCNF extends Kb {
-
+// public class PropKbCNF extends Kb {
+public class PropKbCNF {
 	public static final String SAT_EXECUTABLE = "minisat114.exe";
 	
 	// Kb status constants
@@ -867,13 +862,7 @@ public class PropKbCNF extends Kb {
 	}
 
 	public boolean querySATSolver(String query) {
-		if (_bUseExternalReasoner) {
-			//System.out.println("External reasoner (MiniSAT114)");
-			return queryExternalSATSolver(query);
-		} else {
-			//System.out.println("Internal reasoner (SimpleDPLL)");
-			return queryInternalSATSolver(query);
-		}
+		return queryInternalSATSolver(query);
 	}
 	
 	public boolean queryInternalSATSolver(String query) {
@@ -891,45 +880,6 @@ public class PropKbCNF extends Kb {
 			System.exit(1); // Fail ungracefully
 		}
 		return dpll.unsat();
-	}
-	
-	// Returns true if unsatisfiable
-	public boolean queryExternalSATSolver(String query) {
-	     try {
-
-	           // Open files for reading and writing
-	           //BufferedReader fis_reader = new BufferedReader(_rReader);
-	    	   //System.out.println("PWD: " + System.getProperty("user.dir"));
-	    	 
-	           Process p = Runtime.getRuntime().exec(SAT_EXECUTABLE);
-	           BufferedReader process_out = new BufferedReader(new
-	        		  InputStreamReader(p.getInputStream()));
-	           PrintStream process_in  = new PrintStream(p.getOutputStream(), true);
-
-	           // Provide input to process (could come from any stream)
-	           exportDIMACSQuery(process_in, query);
-	           process_in.close(); // Need to close input stream so process exits!!!
-
-	           // Get output from process (can also be used by BufferedReader to get
-	           // line-by-line... see how fis_reader is constructed).
-	           String line = null;
-	           boolean result = false;
-	           while ((line = process_out.readLine()) != null) {
-	        	   // UNSAT implies ~query is a contradiction so query follows
-	        	   //System.out.println("Line: " + line);
-	               if (line.indexOf("UNSATISFIABLE") >= 0) {
-	                   result = true;
-	               } 
-	           }
-	           process_out.close();
-	           return result;
-
-	       } catch (IOException ioe) {
-	           System.out.println("ERROR in PropKbCNF.querySATSolver:\n" + 
-	        		   "Check WinUNIX.java executable (and 'cygwin1.dll', 'cygz.dll' for Cygwin)\n" + 
-	        		   ioe);
-	           return false;
-	       }
 	}
 	
 	public void exportDIMACSQuery(String filename, String query) {
@@ -983,47 +933,5 @@ public class PropKbCNF extends Kb {
 		}
 		sb.append("0");
 		return sb.toString();
-	}
-
-	@Override
-	public void addFOPCFormula(String s) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public boolean queryFOPC(String s) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean queryFOPC(String assume, String query) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public float getQueryTime() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public int getNumInfClauses() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public int getProofLength() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public void setQueryFile(String f) {
-		// TODO Auto-generated method stub
-		
 	}
 }

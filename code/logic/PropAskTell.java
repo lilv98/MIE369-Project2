@@ -2,7 +2,6 @@ package logic;
 import utils.*;
 import java.io.*;
 import java.util.ArrayList;
-import logic.PropKbCNF.ParseStruct;
 
 public class PropAskTell {
 	/* Static constants */

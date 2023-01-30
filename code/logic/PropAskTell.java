@@ -6,7 +6,6 @@ import java.util.ArrayList;
 public class PropAskTell {
 	/* Static constants */
 	public final static int MAX_INPUT = 4096;
-	public final static String DEFAULT_PREFS_FILE = "prefs.txt";
 	public final static int INDENT = 3;
 	public final static boolean USE_EXTERNAL_SAT_SOLVER = false;
 
@@ -37,56 +36,25 @@ public class PropAskTell {
 	 **/
 	public static void main(String args[]) {
 		try {
-
 			InputStream in;
 			if (args.length >= 1)
 				in = new FileInputStream(args[0]);
 			else
 				in = System.in;
-
 			PropAskTell shell = new PropAskTell(in, System.out);
 			shell.run();
-
 		} catch (FileNotFoundException e) {
-			System.out.println("File IO Error while reading " + args[0]
-					+ ", exiting...");
+			System.out.println("File IO Error while reading " + args[0] + ", exiting...");
 			System.exit(1);
 		}
-
-	}
-
-	/**
-	 * Empty constructor - uses System input/output stream and default
-	 * preferences file.
-	 **/
-	public PropAskTell() {
-		this(System.in, System.out, DEFAULT_PREFS_FILE);
-	}
-
-	/**
-	 * Constructor - uses default preferences file.
-	 * 
-	 * @param is
-	 *            InputStream to read input from
-	 * @param os
-	 *            OutputStream to write output to
-	 **/
-	public PropAskTell(InputStream is, PrintStream os) {
-		this(is, os, DEFAULT_PREFS_FILE);
 	}
 
 	/**
 	 * Constructor
-	 * 
-	 * @param is
-	 *            InputStream to read input from
-	 * @param os
-	 *            OutputStream to write output to
-	 * @param prefs_file
-	 *            File to load default environmental variable
-	 *            bindings/preferences from
+	 * @param is: InputStream to read input from
+	 * @param os: OutputStream to write output to
 	 **/
-	public PropAskTell(InputStream is, PrintStream os, String prefs_file) {
+	public PropAskTell(InputStream is, PrintStream os) {
 		_is = is;
 		_os = os;
 		_ci = new CommandInterface(_is, _os);

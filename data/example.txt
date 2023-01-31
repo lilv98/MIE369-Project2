@@ -6,8 +6,6 @@ new-kb
 //               Tell: Assert Axioms and Facts
 ///////////////////////////////////////////////////////////////
 
-// Note: This is the propositional version of "test-fol.fol"
-
 // Some simple axioms
 tell "a_scott => b_scott"
 tell "b_scott <=> c_scott"

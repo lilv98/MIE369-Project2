@@ -5,8 +5,7 @@ Propositional Logic Reasoning for the Knights and Knaves Puzzles
 ## Background
 [Knights and Knaves](https://en.wikipedia.org/wiki/Knights_and_Knaves) is a set of logical puzzles first introduced by the logician and mathematician Raymond Smullyan in 1978.
 
-The puzzles are set on a fictional island where all inhabitants are either knights, who always tell the truth, or knaves, who always lie. The puzzles involve a visitor to the island who meets small groups of inhabitants. In this project, you are the visitor with the goal of deducing the inhabitants' type from their statements. This requires quite some intelligence, right? No worries! You have an AI running a DPLL algorithm to help you. 
-More specifically, your task is to properly encode the conversations between you and the inhabitants using propositional logic, build a knowledge base, and reason over the knowledge base, so as to tell who are knights and who are knaves.
+The puzzles are set on a fictional island where all inhabitants are either knights, who always tell the truth, or knaves, who always lie. The puzzles involve a visitor to the island who meets small groups of inhabitants. In this project, you are the visitor with the goal of deducing the inhabitants' type from their statements. This requires quite some intelligence, right? No worries! You have an AI running a DPLL algorithm to help you. More specifically, your task is to properly encode the inhabitants' statements using propositional logic, build a knowledge base, and reason over the knowledge base, so as to tell who are knights and who are knaves.
 
 Please answer directly in this file and complete **data/knights.txt**. You are allowed to insert hand-written answers as figures in this file, while you should guarantee they are clearly readable.
 
@@ -25,6 +24,12 @@ Each inhabitant is either a knight or a knave. A knight will always tell the tru
 
 *Please answer here*
 
+## Q2 (1.5 Marks) The DPLL Reasoner
+**data/example.txt**
+Introducing the format
+
+## Q3 (7 Marks) 
+**data/knights.txt**
 
 
 ## Further Notes

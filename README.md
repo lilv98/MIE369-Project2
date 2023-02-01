@@ -1,4 +1,4 @@
-# MIE396-Project2
+# MIE369-Project2
 Propositional Logic Reasoning for the Knights and Knaves Puzzles
 
 

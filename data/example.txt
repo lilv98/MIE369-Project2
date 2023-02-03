@@ -1,4 +1,3 @@
-// A test script for a sample kb, tell statements, and queries
 echo on
 new-kb
 
@@ -6,39 +5,33 @@ new-kb
 //               Tell: Assert Axioms and Facts
 ///////////////////////////////////////////////////////////////
 
-// Some simple axioms
+// a, b, and c stands for awesome, brilliant, and clever, respectively
 tell "a_scott => b_scott"
 tell "b_scott <=> c_scott"
 tell "a_joe => b_joe"
 tell "b_joe <=> c_joe"
+tell "random_1 <=> random_2"
 
-// Exactly one of b_scott or b_joe is true
+// Explain the following proposition
+// Your answer here (0.2 Marks)
+tell "a_scott"
+// Your answer here (0.3 Marks)
 tell "(b_scott | b_joe) ^ ~(b_scott ^ b_joe)"
 
-// A simple fact - A is for Awesome! 
-tell "a_scott"
 
 ///////////////////////////////////////////////////////////////
 //                     Ask: Make Queries
 ///////////////////////////////////////////////////////////////
-
-// Can prove this 
+ask  "random_1"
+// Your answer here (0.1 Marks): the output of the above query and you explanation
+ask  "random_2"
+// Your answer here (0.1 Marks): the output of the above query and you explanation
 ask  "c_scott"
-
-// Cannot prove this
+// Your answer here (0.1 Marks): the output of the above query and you explanation
 ask  "~c_scott"
-
-// Cannot prove this 
+// Your answer here (0.1 Marks): the output of the above query and you explanation
 ask  "c_joe"
-
-// Can prove this
-ask  "~c_joe"
-
-// Can prove this 
-ask  "c_scott | c_joe"
-
-// Cannot prove this 
-ask  "c_scott ^ c_joe"
+// Your answer here (0.1 Marks): the output of the above query and you explanation
 
 quit
 

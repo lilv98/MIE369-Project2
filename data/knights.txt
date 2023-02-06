@@ -1,5 +1,4 @@
 echo on
-// show-cnf true
 new-kb
 
 // Q3.2: Common Knowledge

@@ -1,5 +1,5 @@
 echo on
-// show-cnf true
+show-cnf true
 new-kb
 
 // Common Knowledge
